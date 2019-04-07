@@ -231,8 +231,8 @@ bool APlayerControllerCPP::RequestAccountTypeChange_Validate(int32 PlayerAccount
 void APlayerControllerCPP::Invisible_Implementation()
 {
 	APlayerCPP* PlayerCast = Cast<APlayerCPP>(GetPawn());
-	PlayerCast->GetMesh()->SetVisibility(!bInvisible);
 	bInvisible = !bInvisible;
+	PlayerCast->GetMesh()->SetVisibility(!bInvisible);
 }
 bool APlayerControllerCPP::Invisible_Validate()
 {
